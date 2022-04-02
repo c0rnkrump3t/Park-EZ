@@ -1,12 +1,26 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Contributors
+ **Github ID** |   **Name**     |
+|-------------- |--------------- |
+|antistarM   |Ma-Ya McRae |
+
+## How to set up the project.
+* open a terminal a change directory to the one you prefer to clone the project.
+* Run the following command to copy the github project
+* git clone https://github.com/antistarM/SOEN357_ParkNGo.git
+* 
+## Once you havew installed the project, you need to install all the dependencies with the following command
+* install React packages and dependencies: **npm install** 
 
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm install`
+To install npm
 
 ### `npm start`
+To start the app
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
