@@ -8,11 +8,13 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { MdThumbUp } from "react-icons/md";
 import '../css/AvailableParking.css'
-
+import NavBar from './NavBar';
 
 
 export default function AvailableParkingSpot() {
   return (
+    <div>
+      <NavBar />
     <Box   pt={6}>
     <Grid container
                     spacing={0}
@@ -22,14 +24,19 @@ export default function AvailableParkingSpot() {
                     >
     <Card sx={{width: '75%', minWidth: 275 }}>
       <CardContent>
-        <Typography sx={{ fontSize: 42, padding: 5, fontWeight: 'bold' }} color="text.secondary" gutterBottom >
+        <Typography sx={{ fontSize: 32, padding: 5, fontWeight: 'bold' }} color="text.secondary" gutterBottom >
           Parking Availability
         </Typography>
-        <Typography  variant="h5" component="div" sx={{fontSize:32, fontWeight: 'bold', color:'#25d321'}}>
+        <Typography  variant="h5" component="div" sx={{ padding: 2, fontSize:28, fontWeight: 'bold', color:'#25d321'}}>
         
-        <MdThumbUp className="ThumbsUp"/>
+        <MdThumbUp
+         className="ThumbsUp" 
+        
+ />
 
-        <div>You can park here! </div>
+        <div>You can park here until Friday 1, 2022 </div>
+        <div>9:10pm </div>
+
         </Typography>
 
        
@@ -40,5 +47,7 @@ export default function AvailableParkingSpot() {
     </Card>
     </Grid>
     </Box>
+    </div>
+
   );
 }
