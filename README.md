@@ -22,6 +22,9 @@ To install npm
 To start the app
 
 
+### `npm install react-icons --save`
+To install the icons 
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
