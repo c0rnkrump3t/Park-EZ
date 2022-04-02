@@ -6,19 +6,12 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { ThumbUp, Transform } from "@material-ui/icons";
 import { MdThumbUp } from "react-icons/md";
 import '../css/AvailableParking.css'
-// const bull = (
-//   <Box
-//     // component="span"
-//     sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-//   >
-//     •
-//   </Box>
-// );
 
-export default function BasicCard() {
+
+
+export default function AvailableParkingSpot() {
   return (
     <Box   pt={6}>
     <Grid container
