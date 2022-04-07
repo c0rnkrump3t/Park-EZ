@@ -8,7 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { HiOutlineMenu } from "react-icons/hi";
 import { RiEnglishInput } from "react-icons/ri";
-
+import '../css/style.css';
 
 
 
@@ -17,7 +17,7 @@ export default function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleChange = (event) => {
-    setAuth(event.target.checked);
+    alert(event);
   };
 
   const handleMenu = (event) => {
@@ -30,21 +30,53 @@ export default function NavBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ background: '#2E3B55'}} >
-        <Toolbar >
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <HiOutlineMenu />
-          </IconButton>
-          <Typography color= "#eb52cc " variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Logo goes here!!
+      <AppBar position="static" >
+      
+        <Toolbar  className="bar" >
+        {/* <h2>Park'n'Go</h2> */}
+        <Typography color= "#f2f2f2" variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            Park'n'Go
           </Typography>
-          {auth && (
+         
+
+
+          <div   className="language-menu" >
+              <IconButton              
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleMenu}
+                color="inherit"
+              >
+                <RiEnglishInput />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>English</MenuItem>
+                <MenuItem onClick={handleClose}>French</MenuItem>
+                <MenuItem onClick={handleClose}>More</MenuItem>
+
+              </Menu>
+            </div>
+
+          {/* <Typography color= "#eb52cc " variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Logo goes here!!
+          </Typography> */}
+       {/*    {auth && (
             <div>
               <IconButton
                 size="large"
@@ -77,7 +109,7 @@ export default function NavBar() {
 
               </Menu>
             </div>
-          )}
+          )} */}
         </Toolbar>
       </AppBar>
     </Box>
