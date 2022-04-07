@@ -1,0 +1,21 @@
+.bar{
+    /*background-color:#5f6570;*/
+    background-color: red;
+}
+
+
+.language-menu {
+    float: right;
+}
+
+
+.thumbs-up{    
+    
+    display: block;
+    width:50vmin;
+    height: 50vmin;
+    margin-left: auto;
+    margin-right: auto;
+    color: #05aa3c;
+    
+}
