@@ -1,19 +1,20 @@
 import * as React from 'react';
-import { FaRegThumbsUp } from "react-icons/fa";
+import { FaRegThumbsDown } from "react-icons/fa";
 import NavBar from './NavBar';
 import '../css/style.css';
 
 
-export default function Available() {
+export default function Unavailable() {
   return (
     <div className="parking-content">
       <NavBar />
       <div>
         <div>
-          <FaRegThumbsUp className="thumbs-up" />
+          <FaRegThumbsDown className="thumbs-down" />
         </div>
+
         <div className='parking-details'>
-          <div>Available until</div>
+          <div>Available after</div>
           <div>Friday, April 6, 2022</div>
           <div>9:00 P.M.</div>
         </div>
@@ -21,6 +22,9 @@ export default function Available() {
       <div className='button-container'>
         <button className="parking-button">
           Details
+        </button>
+        <button className="parking-button">
+          See alternatives
         </button>
       </div>
     </div>

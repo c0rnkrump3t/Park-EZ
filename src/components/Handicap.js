@@ -1,21 +1,19 @@
 import * as React from 'react';
-import { FaRegThumbsUp } from "react-icons/fa";
 import NavBar from './NavBar';
+import { BiHandicap } from 'react-icons/bi';
 import '../css/style.css';
 
 
-export default function Available() {
+export default function Handicap() {
   return (
     <div className="parking-content">
       <NavBar />
       <div>
         <div>
-          <FaRegThumbsUp className="thumbs-up" />
+          <BiHandicap className="handicap" />
         </div>
         <div className='parking-details'>
-          <div>Available until</div>
-          <div>Friday, April 6, 2022</div>
-          <div>9:00 P.M.</div>
+          <div>ONLY</div>
         </div>
       </div>
       <div className='button-container'>

@@ -22,6 +22,42 @@
     color: #05aa3c;
 }
 
+
+.thumbs-down {
+    margin-top: 10%;
+    display: block;
+    width: 50vmin;
+    height: 50vmin;
+    margin-left: auto;
+    margin-right: auto;
+    color: red;
+}
+
+
+.thumbs-up-pay {    
+    display: inline;
+    width: 50vmin;
+    height: 50vmin;    
+    color: #05aa3c;
+}
+
+.attach-money {
+    position: relative;
+    top: -32vmin;
+    width: 25vmin;
+    height: 25vmin;      
+}
+
+.parking-pay{
+    display: block;
+    margin-top: 10%;
+    width: 50vmin;    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-height: 50vmin;
+}
+
 .parking-details {
 
 
@@ -59,3 +95,31 @@
     transition-duration: 0.4s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
+
+  .handicap {
+    margin-top: 10%;
+    display: block;
+    width: 50vmin;
+    height: 50vmin;
+    margin-left: auto;
+    margin-right: auto;
+    color: #05aa3c;
+}
+
+.permit{
+    border: solid black 1px;
+    text-align: center;
+    padding: 10vmin;
+    margin-top: 10%;    
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+}
+
+.permit-text{
+    margin-bottom: 10%;
+}
