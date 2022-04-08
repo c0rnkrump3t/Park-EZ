@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import {Route, Routes} from 'react-router-dom';
+import AvailableParking from './components/AvailableParking';
+import Available from './components/Available';
+import Unavailable from './components/Unavailable';
+import Pay from './components/Pay';
+import Handicap from './components/Handicap';
+import Permit from './components/Permit';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+  
+   <Route path='/available' element={[<AvailableParking/>]} />
+   <Route path='/s001' element={[<Available/>]} />
+   <Route path='/s002' element={[<Unavailable/>]} />
+   <Route path='/s003' element={[<Pay/>]} />
+   <Route path='/s004' element={[<Handicap/>]} />
+   <Route path='/s005' element={[<Permit/>]} />
+   
+   
+
+
+    </Routes>
+
+
   );
 }
 
