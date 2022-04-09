@@ -4,7 +4,7 @@
 |-------------- |--------------- |
 |antistarM   |Ma-Ya McRae |
 |njayem   |Nadine El-Mufti |
-|   |Warda Ahmed Salem |
+|wardslm   |Warda Ahmed Salem |
 |daria-koroleva   |Daria Koroleva |
 
 ## How to set up the project.
