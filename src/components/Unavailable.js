@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 import '../css/style.css';
 
 
-export default function Unavailable() {
+export default function Unavailable(props) {
   return (
     <div className="parking-content">
       <NavBar />
@@ -13,10 +13,10 @@ export default function Unavailable() {
           <FaRegThumbsDown className="thumbs-down" />
         </div>
 
-        <div className='parking-details'>
-          <div>Available after</div>
-          <div>Friday, April 6, 2022</div>
-          <div>9:00 P.M.</div>
+        <div className='parking-details'>          
+          <div>{props.message}</div>
+          <div>{props.date}</div>
+          <div>{props.time}</div>         
         </div>
       </div>
       <div className='button-container'>
