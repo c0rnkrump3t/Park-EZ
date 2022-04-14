@@ -2,7 +2,7 @@ import * as React from 'react';
 import { FaRegThumbsUp } from "react-icons/fa";
 import NavBar from './NavBar';
 import '../css/style.css';
-
+import { Link } from 'react-router-dom';
 
 export default function Available(props) {
   return (
@@ -19,9 +19,11 @@ export default function Available(props) {
         </div>
       </div>
       <div className='button-container'>
+        <Link to={`/details${props.sign}`}>
         <button className="parking-button">
           Details
         </button>
+        </Link>
       </div>
     </div>
   );

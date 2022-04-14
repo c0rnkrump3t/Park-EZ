@@ -2,6 +2,7 @@ import * as React from 'react';
 import { FaRegThumbsDown } from "react-icons/fa";
 import NavBar from './NavBar';
 import '../css/style.css';
+import { Link } from 'react-router-dom';
 
 
 export default function Unavailable(props) {
@@ -20,9 +21,11 @@ export default function Unavailable(props) {
         </div>
       </div>
       <div className='button-container'>
+      <Link to={`/details${props.sign}`}>
         <button className="parking-button">
           Details
         </button>
+        </Link>
         <button className="parking-button">
           See alternatives
         </button>

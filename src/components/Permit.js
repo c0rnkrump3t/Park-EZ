@@ -1,6 +1,7 @@
 import * as React from 'react';
 import NavBar from './NavBar';
 import '../css/style.css';
+import { Link } from 'react-router-dom';
 
 
 export default function Permit(props) {
@@ -20,9 +21,11 @@ export default function Permit(props) {
         </div>
       </div>
       <div className='button-container'>
+      <Link to={`/details${props.sign}`}>
         <button className="parking-button">
           Details
         </button>
+        </Link>
       </div>
     </div>
   );
