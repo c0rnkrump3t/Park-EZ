@@ -26,9 +26,12 @@ export default function Unavailable(props) {
           Details
         </button>
         </Link>
+        <Link to={`/map`}>
         <button className="parking-button">
           See alternatives
         </button>
+        </Link>
+
       </div>
     </div>
   );

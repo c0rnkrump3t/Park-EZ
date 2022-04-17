@@ -6,7 +6,7 @@ import Pay from './components/Pay';
 import Handicap from './components/Handicap';
 import Permit from './components/Permit';
 import Details from './components/details';
-
+import GoogleMapNew from './components/GoogleMap';
 function App() {
   return (
 
@@ -23,7 +23,10 @@ function App() {
         <Route path='/s008' element={[<Unavailable message="Available AFTER" date="Tuesday, July 12, 2022" time="8:00 A.M." sign="008"/>]} />
         <Route path='/s009' element={[<Unavailable message="Available AFTER" date="Wednesday, April 27, 2022" time="5:00 P.M." sign="009"/>]} />
         <Route path='/s010' element={[<Available message="Available until" date="Friday, April 8, 2022" time="9:00 A.M." sign="010"/>]} />
-       
+        
+        {/* Link to Google Map with alternative parking spots */}
+        <Route path='/map' element={[<GoogleMapNew/>]} />
+
        {/* Signage Details */}
         <Route path='/details001' element={[<Details image= 'https://imgur.com/lK63dXC.png' sign="001"/>]} />
         <Route path='/details002' element={[<Details image= 'https://imgur.com/PUjNLsG.png' sign="002"/>]} />
