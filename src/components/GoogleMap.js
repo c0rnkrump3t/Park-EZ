@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import NavBar from './NavBar';
 
 
 const mapStyles = {
@@ -13,17 +14,14 @@ export class MapContainer extends Component {
 
         this.state = {
             stores: [{ lat: 45.62971555855009, lng: -73.51648254884661 },
-            { latitude: 45.62974313124825, longitude: -73.51657553975353 },
-            { latitude: 45.629385058613394, longitude: -73.51457508374155 },
-            { latitude: 45.631462014072575, longitude: -73.516624543885 },
-            { latitude: 45.62739493226245, longitude: -73.51875072126252 },
-            { latitude: 45.62739493226245, longitude: -73.51875072126252 },
-            { latitude: 45.631503000518386, longitude: -73.51659028221708 },
-            { latitude: 45.63064022278317, longitude: -73.51705162217493 },
-            { latitude: 45.629822447284454, longitude: -73.51738421609697 },
-            { latitude: 45.62947732742246, longitude: -73.51759879280462 },
-            { latitude: 45.629612374595865, longitude: -73.51593582324257 },
-            { latitude: 45.632215719930606, longitude: -73.51579634837205 }]
+            { latitude: 45.49340226063122, longitude: -73.57969544866975 },
+            { latitude: 45.49347986122256, longitude: -73.57970822189485 },
+            { latitude: 45.493706693107335, longitude: -73.57938463352563 },
+            { latitude: 45.494306599346466, longitude: -73.57874597227062 },
+            { latitude: 45.49421907217822, longitude: -73.57994508427967 },
+            { latitude: 45.494155146085916, longitude: -73.5798217026655 },
+            { latitude: 45.49315864172925, longitude: -73.57859325093901 },
+            { latitude: 45.493004464008926, longitude: -73.57875954789768 }]
         }
     }
     displayMarkers = () => {
@@ -46,15 +44,19 @@ export class MapContainer extends Component {
 
     render() {
         return (
+            <div>
+            <NavBar />
             <Map
                 google={this.props.google}
                 zoom={18}
                 style={mapStyles}
-                initialCenter={{ lat: 45.630854821630685, lng: -73.51693342835968 }}
+                initialCenter={{ lat: 45.493563430970646, lng: -73.57952513900175 }}
             >
-
                 {this.displayMarkers()}
             </Map>
+            </div>
+            
+
         );
     }
 }
