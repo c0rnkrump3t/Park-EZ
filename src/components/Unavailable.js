@@ -23,12 +23,16 @@ export default function Unavailable(props) {
       <div className='button-container'>
       <Link to={`/details${props.sign}`}>
         <button className="parking-button">
-          Details
+        <div>{props.details}</div>
+
+          {/* Details */}
         </button>
         </Link>
         <Link to={`/map`}>
         <button className="parking-button">
-          See alternatives
+        <div>{props.alternatives}</div>
+
+          {/* See alternatives */}
         </button>
         </Link>
 

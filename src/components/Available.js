@@ -16,12 +16,14 @@ export default function Available(props) {
           <div>{props.message}</div>
           <div>{props.date}</div>
           <div>{props.time}</div>
+          <div>{props.lang}</div>
+
         </div>
       </div>
       <div className='button-container'>
         <Link to={`/details${props.sign}`}>
         <button className="parking-button">
-          Details
+        <div>{props.details}</div>
         </button>
         </Link>
       </div>

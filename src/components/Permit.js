@@ -23,7 +23,7 @@ export default function Permit(props) {
       <div className='button-container'>
       <Link to={`/details${props.sign}`}>
         <button className="parking-button">
-          Details
+        <div>{props.details}</div>
         </button>
         </Link>
       </div>

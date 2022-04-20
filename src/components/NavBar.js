@@ -7,10 +7,9 @@ import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { HiOutlineMenu } from "react-icons/hi";
-import { RiEnglishInput } from "react-icons/ri";
+import { MdLanguage } from "react-icons/md";
 import '../css/style.css';
-
-
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
   const [auth, setAuth] = React.useState(true);
@@ -49,7 +48,7 @@ export default function NavBar() {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <RiEnglishInput />
+                <MdLanguage  />
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -66,9 +65,9 @@ export default function NavBar() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>English</MenuItem>
-                <MenuItem onClick={handleClose}>French</MenuItem>
-                <MenuItem onClick={handleClose}>More</MenuItem>
+                <MenuItem  component={Link} to="/HomePage_en" onClick={handleClose}>English</MenuItem>
+                <MenuItem  component={Link} to="/HomePage_FR" onClick={handleClose}>French</MenuItem>
+                <MenuItem  component={Link} to="Coming Soon " onClick={handleClose}>More</MenuItem>
 
               </Menu>
             </div>

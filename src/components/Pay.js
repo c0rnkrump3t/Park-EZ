@@ -24,12 +24,12 @@ export default function Pay(props) {
       <div className='button-container'>
       <Link to={`/details${props.sign}`}>
         <button className="parking-button">
-          Details
+        <div>{props.details}</div>
         </button>
         </Link>
         <a href='https://pservicemobile.passportca.com/park/'>
         <button className="parking-button">
-          Pay
+        <div>{props.pay}</div>
         </button>
         </a>
       </div>
