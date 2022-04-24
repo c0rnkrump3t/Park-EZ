@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export default function Unavailable(props) {
   return (
     <div className="parking-content">
-      <NavBar />
+      <NavBar sign={props.sign}/>
       <div>
         <div>
           <FaRegThumbsDown className="thumbs-down" />

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export default function Permit(props) {
   return (
     <div className="parking-content">
-      <NavBar />
+      <NavBar sign={props.sign}/>
       <div>
         <div className="permit">
           <div>SECTOR</div>

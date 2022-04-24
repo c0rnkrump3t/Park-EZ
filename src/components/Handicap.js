@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export default function Handicap(props) {
   return (
     <div className="parking-content">
-      <NavBar />
+      <NavBar sign={props.sign}/>
       <div>
         <div>
           <BiHandicap className="handicap" />

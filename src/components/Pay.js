@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 export default function Pay(props) {
   return (
     <div className="parking-content">
-      <NavBar />
+      <NavBar sign={props.sign}/>
       <div>
         <div className='parking-pay'>
           <FaRegThumbsUp className="thumbs-up-pay" />
