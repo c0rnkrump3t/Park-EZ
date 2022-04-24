@@ -3,12 +3,13 @@ import { FaRegThumbsUp } from "react-icons/fa";
 import { MdAttachMoney } from "react-icons/md";
 import NavBar from './NavBar';
 import '../css/style.css';
+import { Link } from 'react-router-dom';
 
 
 export default function Pay(props) {
   return (
     <div className="parking-content">
-      <NavBar />
+      <NavBar sign={props.sign}/>
       <div>
         <div className='parking-pay'>
           <FaRegThumbsUp className="thumbs-up-pay" />
@@ -21,13 +22,18 @@ export default function Pay(props) {
         </div>
       </div>
       <div className='button-container'>
+      <Link to={`/details${props.sign}`}>
         <button className="parking-button">
-          Details
+        <div>{props.details}</div>
         </button>
+        </Link>
+        <a href='https://pservicemobile.passportca.com/park/'>
         <button className="parking-button">
-          Pay
+        <div>{props.pay}</div>
         </button>
+        </a>
       </div>
     </div>
   );
 }
+
