@@ -10,11 +10,11 @@ export default function Permit(props) {
       <NavBar sign={props.sign}/>
       <div>
         <div className="permit">
-          <div>SECTOR</div>
+          <div>{props.sectorLabel}</div>
           <div>{props.sector}</div>
         </div>
         <div className='parking-details'>
-          <div className='permit-text'>BY PERMIT ONLY</div>          
+          <div className='permit-text'>{props.permitLabel}</div>          
           <div>{props.message}</div>
           <div>{props.date}</div>
           <div>{props.time}</div>

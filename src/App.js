@@ -21,7 +21,7 @@ function App(props) {
         {/* Path to English ver of signs */}
         <Route path='/s001' element={[<Unavailable message="Available AFTER" date="Friday, April 8, 2022" time="8:00 A.M." sign="001" details="Details" alternatives="See alternatives" lang="001"/>]} />
         <Route path='/s002' element={[<Available message="Available for 15 Minutes" sign="002" details="Details"/>]} />
-        <Route path='/s003' element={[<Permit sector="35" message="Available until" date="Tuesday, May 3, 2022" time="9:00 A.M." sign="003" details="Details"/>]} />
+        <Route path='/s003' element={[<Permit sector="35" message="Available until" date="Tuesday, May 3, 2022" time="9:00 A.M." sign="003" details="Details" permitLabel="BY PERMIT ONLY" sectorLabel="SECTOR"/>]} />
         <Route path='/s004' element={[<Unavailable message="Available with Handicap permit AFTER" date="Thursday, November 17, 2022" time="1:30 P.M." sign="004" details="Details" alternatives="See alternatives" />]} />
         <Route path='/s005' element={[<Handicap sign="005" message="ONLY" details="Details"/>]}  />
         <Route path='/s006' element={[<Pay message="Payment required until" date="Saturday, April 9, 2022" time="6:00 P.M." sign="006"  details="Details" pay="Pay"/>]} />
@@ -33,7 +33,7 @@ function App(props) {
         {/* Path to French ver of signs */}
         <Route path='/s001-fr' element={[<Unavailable message="Disponible APRÈS" date="Vendredi, 8 Avril, 2022" time="8h" sign="001" details="Détails" alternatives="Voir des alternatives" />]} />
         <Route path='/s002-fr' element={[<Available message="Disponible pendant 15 minutes" sign="002" details="Détails"/>]} />
-        <Route path='/s003-fr' element={[<Permit sector="35" message="Disponible jusqu'au" date="Mardi, 3 Mai, 2022" time="9h" sign="003" details="Détails" />]} />
+        <Route path='/s003-fr' element={[<Permit sector="35" message="Disponible jusqu'au" date="Mardi, 3 Mai, 2022" time="9h" sign="003" details="Détails" permitLabel="AVEC PERMIS SEULEMENT" sectorLabel="SECTEUR" />]} />
         <Route path='/s004-fr' element={[<Unavailable message="Disponible avec le permis Handicap APRÈS" date="Jeudi , 17 Novembre, 2022" time="13h30." sign="004" details="Détails" alternatives="Voir des alternatives" />]} />
         <Route path='/s005-fr' element={[<Handicap sign="005" message="Avec permis seulement" details="Détails" />]}  />
         <Route path='/s006-fr' element={[<Pay message="Paiement requis jusqu'au" date="Samedi, 9 Avril, 2022" time="18h" sign="006" details="Détails"  pay="Payer" />]} />
