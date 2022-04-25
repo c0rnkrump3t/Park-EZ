@@ -7,6 +7,7 @@ import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 
+//
 export default function HomePage_en() {
     return (
 
@@ -22,7 +23,6 @@ export default function HomePage_en() {
             >
                 <Typography align='center' variant='h3' color={"#484848"} >
                     Available parking signage
-                    {/* props */}
                 </Typography>
             </Grid>
             <Box sx={{ '& button': { m: 2 } }}>
