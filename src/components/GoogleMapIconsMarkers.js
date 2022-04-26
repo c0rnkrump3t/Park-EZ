@@ -57,7 +57,7 @@ const GoogleMapIconsMarkers = () => {
 
   return <div
     ref={googleMapRef}
-    style={{ width: "100%", height: 670 }} // map view size
+    style={{ width: "100%", height: 600 }} // map view size
     zoom={1}
 
   />

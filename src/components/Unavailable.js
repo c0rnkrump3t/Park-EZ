@@ -2,10 +2,14 @@ import * as React from 'react';
 import { FaRegThumbsDown } from "react-icons/fa";
 import NavBar from './NavBar';
 import '../css/style.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 export default function Unavailable(props) {
+
+  const location = useLocation();
+  const currentPage = location.pathname.substring(1,);
+
   return (
     <div className="parking-content">
       <NavBar sign={props.sign}/>
@@ -28,7 +32,7 @@ export default function Unavailable(props) {
           {/* Details */}
         </button>
         </Link>
-        <Link to={`/map`}>
+        <Link to={`/map?signpage=${currentPage}`}>
         <button className="parking-button">
         <div>{props.alternatives}</div>
 

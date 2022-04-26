@@ -20,13 +20,16 @@ export default function Details(props) {
           <Card sx={{ width: '75%', minWidth: 275 }} >
             <img src={props.image} style={{ height: '100%', width: '100%' }} />
           </Card>
-          <Link to={`/s${props.sign}`}>
-              <button className="parking-button">
-                Back
-              </button>
-            </Link>
         </Grid>
       </Box>
+      <div className='button-container'>
+        <Link to={`/s${props.sign}`}>
+          <button className="parking-button">
+            Back
+          </button>
+        </Link>
+      </div>
+
     </div>
   );
 }
