@@ -6,7 +6,7 @@ import Pay from './components/Pay';
 import Handicap from './components/Handicap';
 import Permit from './components/Permit';
 import Details from './components/details';
-import GoogleMapNew from './components/GoogleMap';
+import GoogleMap from './components/GoogleMap';
 import HomePage_en from './components/HomePage_en';
 import HomePage_fr from './components/HomePage_fr';
 
@@ -34,8 +34,8 @@ function App(props) {
         <Route path='/s001-fr' element={[<Unavailable message="Disponible APRÈS" date="Vendredi, 8 Avril, 2022" time="8h" sign="001" details="Détails" alternatives="Voir des alternatives" />]} />
         <Route path='/s002-fr' element={[<Available message="Disponible pendant 15 minutes" sign="002" details="Détails"/>]} />
         <Route path='/s003-fr' element={[<Permit sector="35" message="Disponible jusqu'au" date="Mardi, 3 Mai, 2022" time="9h" sign="003" details="Détails" permitLabel="AVEC PERMIS SEULEMENT" sectorLabel="SECTEUR" />]} />
-        <Route path='/s004-fr' element={[<Unavailable message="Disponible avec le permis Handicap APRÈS" date="Jeudi , 17 Novembre, 2022" time="13h30." sign="004" details="Détails" alternatives="Voir des alternatives" />]} />
-        <Route path='/s005-fr' element={[<Handicap sign="005" message="Avec permis seulement" details="Détails" />]}  />
+        <Route path='/s004-fr' element={[<Unavailable message="Disponible avec le permis Handicap APRÈS" date="Jeudi , 17 Novembre, 2022" time="13h30" sign="004" details="Détails" alternatives="Voir des alternatives" />]} />
+        <Route path='/s005-fr' element={[<Handicap sign="005" message="AVEC PERMIS SEULEMENT" details="Détails" />]}  />
         <Route path='/s006-fr' element={[<Pay message="Paiement requis jusqu'au" date="Samedi, 9 Avril, 2022" time="18h" sign="006" details="Détails"  pay="Payer" />]} />
         <Route path='/s007-fr' element={[<Available message="Disponible jusqu'au" date="Lundi, 7 Février, 2022" time="8h" sign="007" details="Détails"  />]} />
         <Route path='/s008-fr' element={[<Unavailable message="Disponible APRÈS" date="Mardi, 12 Juillet, 2022" time="8h" sign="008" details="Détails" alternatives="Voir des alternatives"/>]} />
@@ -48,7 +48,7 @@ function App(props) {
 
 
         {/* Path to Google Map with alternative parking spots */}
-        <Route path='/map' element={[<GoogleMapNew />]} />
+        <Route path='/map' element={[<GoogleMap />]} />
 
        {/* Signage Details */}
         <Route path='/details001' element={[<Details image= 'https://imgur.com/lK63dXC.png' sign="001"/>]} />
