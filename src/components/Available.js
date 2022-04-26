@@ -2,12 +2,17 @@ import * as React from 'react';
 import { FaRegThumbsUp } from "react-icons/fa";
 import NavBar from './NavBar';
 import '../css/style.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Available(props) {
+
+  const location = useLocation();
+  const currentPage = location.pathname.substring(1,);
+  const currentPath = currentPage.replace('-FR', '');
+
   return (
     <div className="parking-content">
-      <NavBar sign={props.sign}/>
+      <NavBar currentPath={currentPath} />
       <div>
         <div>
           <FaRegThumbsUp className="thumbs-up" />
@@ -21,10 +26,10 @@ export default function Available(props) {
         </div>
       </div>
       <div className='button-container'>
-        <Link to={`/details${props.sign}`}>
-        <button className="parking-button">
-        <div>{props.details}</div>
-        </button>
+        <Link to={`/details${props.sign}?signpage=${currentPage}`}>
+          <button className="parking-button">
+            <div>{props.details}</div>
+          </button>
         </Link>
       </div>
     </div>
