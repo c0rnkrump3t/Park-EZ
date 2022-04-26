@@ -63,9 +63,10 @@ export default function NavBar(props) {
               }}
               open={Boolean(anchorEl)}
               onClose={handleClose}
-            >              
-              <MenuItem component={Link} to={`/s${props.sign}`} onClick={handleClose}>English</MenuItem>
-              <MenuItem component={Link} to={`/s${props.sign}-FR`} onClick={handleClose}>French</MenuItem>              
+            >
+              <MenuItem component={Link} to={`/${props.currentPath}`} onClick={handleClose}>English</MenuItem>
+              <MenuItem component={Link} to={`/${props.currentPath}-FR`} onClick={handleClose}>French</MenuItem>
+
             </Menu>
           </div>
 

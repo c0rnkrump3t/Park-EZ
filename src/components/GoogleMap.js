@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GoogleMapIconsMarkers from './GoogleMapIconsMarkers';
 import NavBar from './NavBar';
-import { Link, useSearchParams  } from 'react-router-dom';
+import { Link, useSearchParams, useLocation } from 'react-router-dom';
 
 const GOOGLE_MAP_API_KEY = 'AIzaSyBXs2c0Ul3OAB9W4i2ljJ_sWV1N1lLYsW0';
 
@@ -18,9 +18,16 @@ const loadGoogleMapScript = (callback) => {
 
 const GoogleMap = (props) => {
   const [loadMap, setLoadMap] = useState(false);
+  const location = useLocation();
+  const currentPage = location.pathname.substring(1,);
+
   const [searchParams] = useSearchParams();
-    const signpage= searchParams.get("signpage");
-  
+  const signpage = searchParams.get("signpage");
+  const labelButton = signpage.includes("FR") ? "Retour" : "Back";
+
+  const currentPath = currentPage + "?signpage=" + signpage.replace('-FR', '');
+
+
   useEffect(() => {
     loadGoogleMapScript(() => {
       setLoadMap(true)
@@ -29,13 +36,13 @@ const GoogleMap = (props) => {
 
   return (
     <div className="GoogleMapDefault">
-      <NavBar />
+      <NavBar currentPath={currentPath} />
 
       {!loadMap ? <div>Loading...</div> : <GoogleMapIconsMarkers />}
       <div className='button-container'>
         <Link to={`/${signpage}`}>
           <button className="parking-button">
-            Back
+            {labelButton}
           </button>
         </Link>
       </div>
